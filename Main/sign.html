@@ -1,0 +1,51 @@
+<html>
+	<body>
+	<style>
+		h1{
+			color:blue;		
+		}
+		p{
+			color:white;
+		}
+		body{
+			background-image:url("mp.jpg");
+		}
+
+	</style>
+		<h1><center>Sign up here!</center></h1>
+		<center><form method = "post" action = "form.php">
+		<br/><br/>
+		<br/><br/>	
+		<div>Name:	<input type = "text" placeholder = "Enter name" id ="name" name = "name" /><br/><br/><br/></div>
+		<div>USN:	<input type = "text" placeholder = "Enter USN" id = "usn" name ="usn"/><br/><br/><br/></div>
+		<div>Sex:	<input type = "text" placeholder = "Enter Gender"id = "sex" name = "sex"/><br/><br/><br/></div>
+		<p> If age greater than 20 client side validation using JavaScript.<br/><br/><br/></p> 
+		<div>Age:	<input type = "number" placeholder = "Enter age"id = "age" name = "age"/> <button onclick = "check1()">OK</button><br/><br/><br/></div>
+		<div>Stream: <textarea placeholder = "Enter the Stream" id = "subjects" rows= "4" columns = "20" name="subject"></textarea><br/><br/><br/></div>
+		<div><input type = "submit" onclick ="check()"><br/></div>
+		</form>
+		</center>
+		<script>
+		var name = document.getElementById("name").value;
+		var gender = document.getElementById("sex").value;
+		var usn = document.getElementById("usn").value;
+		var text = document.getElementById("subjects").value;
+		function  check()
+			{
+				if(name == undefined || gender == undefined || usn == undefined || text == undefined)
+					{
+						window.alert("Please enter valid details");
+					}
+			}
+		function check1()
+			{
+				var age = document.getElementById("age").value;
+
+				if(age > 20)
+					{
+						window.alert("Please enter valid age");
+					}
+			}
+	</script>
+	</body>
+</html>
